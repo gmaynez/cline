@@ -141,6 +141,18 @@ async function loadGeneratedProviderModels(): Promise<
 	return Llms.getGeneratedProviderModels();
 }
 
+function includesGeneratedModels(providerId: string): boolean {
+	const modelCatalog =
+		Llms.MODEL_COLLECTIONS_BY_PROVIDER_ID[providerId]?.provider.metadata
+			?.modelCatalog;
+	return !(
+		modelCatalog &&
+		typeof modelCatalog === "object" &&
+		"includeGeneratedModels" in modelCatalog &&
+		modelCatalog.includeGeneratedModels === false
+	);
+}
+
 async function mergeKnownModels(
 	providerId: string,
 	defaultKnownModels: Record<string, ModelInfo> = {},
@@ -153,14 +165,21 @@ async function mergeKnownModels(
 		return Llms.sortModelsByReleaseDate(privateModels);
 	}
 
-	const generatedProviderModels = await loadGeneratedProviderModels();
-	const generatedKeys = Llms.resolveProviderModelCatalogKeys(providerId);
-	const generated = Object.assign(
-		{},
-		...generatedKeys.map(
-			(generatedKey) => generatedProviderModels[generatedKey] ?? {},
-		),
-	);
+	const includeGeneratedModels = includesGeneratedModels(providerId);
+	const generatedProviderModels = includeGeneratedModels
+		? await loadGeneratedProviderModels()
+		: {};
+	const generated = includeGeneratedModels
+		? Object.assign(
+				{},
+				...Llms.resolveProviderModelCatalogKeys(providerId).map(
+					(generatedKey) => generatedProviderModels[generatedKey] ?? {},
+				),
+			)
+		: {};
+	// Curated providers can map a small set of public API IDs to dynamic
+	// provider behavior; models.dev IDs must not reappear after a live refresh.
+	const catalogModels = includeGeneratedModels ? liveModels : {};
 	// For providers with a registered public model source (Ollama, LM Studio),
 	// the live response is the authoritative list of what the user has
 	// actually installed. Skip the bundled catalog so the picker doesn't
@@ -196,7 +215,7 @@ async function mergeKnownModels(
 	const knownModelsWithoutUserOverrides = Llms.sortModelsByReleaseDate({
 		...generated,
 		...defaultKnownModels,
-		...liveModels,
+		...catalogModels,
 		...privateModels,
 		...publicModels,
 	});

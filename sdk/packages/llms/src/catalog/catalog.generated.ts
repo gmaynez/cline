@@ -14,7 +14,7 @@ export const GENERATED_PROVIDER_MODELS: {
 	version: number;
 	providers: Record<string, Record<string, ModelInfo>>;
 } = {
-	version: 1783565774738,
+	version: 1783711740125,
 	providers: {
 		aihubmix: {
 			"glm-5.2": {
@@ -3898,7 +3898,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				id: "cline-pass/glm-5.2",
 				contextWindow: 1048576,
 				maxInputTokens: 1048576,
-				maxTokens: 1048576,
+				maxTokens: 131072,
 				capabilities: [
 					"tools",
 					"reasoning",
@@ -3907,9 +3907,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.9,
-					output: 3.08,
-					cacheRead: 0.18,
+					input: 0.42,
+					output: 1.32,
+					cacheRead: 0.078,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-06-13",
@@ -3944,7 +3944,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				id: "cline-pass/deepseek-v4-flash",
 				contextWindow: 1048576,
 				maxInputTokens: 1048576,
-				maxTokens: 65536,
+				maxTokens: 384000,
 				capabilities: [
 					"tools",
 					"reasoning",
@@ -3953,9 +3953,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.09,
-					output: 0.18,
-					cacheRead: 0.018,
+					input: 0.084,
+					output: 0.168,
+					cacheRead: 0.0168,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-24",
@@ -3967,7 +3967,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				id: "cline-pass/kimi-k2.7-code",
 				contextWindow: 262144,
 				maxInputTokens: 262144,
-				maxTokens: 16384,
+				maxTokens: 262144,
 				capabilities: [
 					"images",
 					"tools",
@@ -3977,9 +3977,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.74,
-					output: 3.5,
-					cacheRead: 0.15,
+					input: 0.72,
+					output: 3.49,
+					cacheRead: 0.159,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-06-12",
@@ -4001,9 +4001,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.65,
+					input: 0.66,
 					output: 3.41,
-					cacheRead: 0.14,
+					cacheRead: 0.15,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-21",
@@ -4036,8 +4036,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"cline-pass/mimo-v2.5": {
 				name: "MiMo-V2.5",
 				id: "cline-pass/mimo-v2.5",
-				contextWindow: 32000,
-				maxInputTokens: 32000,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
 				maxTokens: 131072,
 				capabilities: [
 					"images",
@@ -4060,9 +4060,9 @@ export const GENERATED_PROVIDER_MODELS: {
 			"cline-pass/minimax-m3": {
 				name: "MiniMax-M3",
 				id: "cline-pass/minimax-m3",
-				contextWindow: 524288,
-				maxInputTokens: 524288,
-				maxTokens: 512000,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
+				maxTokens: 131072,
 				capabilities: [
 					"images",
 					"tools",
@@ -4133,7 +4133,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				id: "deepseek/deepseek-v4-flash",
 				contextWindow: 1048576,
 				maxInputTokens: 1048576,
-				maxTokens: 65536,
+				maxTokens: 384000,
 				capabilities: [
 					"tools",
 					"reasoning",
@@ -4210,6 +4210,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-28",
+				family: "laguna",
 				description: "Frontier model built for agentic coding ",
 			},
 		},
@@ -6179,6 +6180,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-28",
+				family: "laguna",
 			},
 			"poolside/laguna-xs.2:free": {
 				id: "poolside/laguna-xs.2:free",
@@ -6194,6 +6196,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-28",
+				family: "laguna",
 			},
 			"~anthropic/claude-haiku-latest": {
 				id: "~anthropic/claude-haiku-latest",
@@ -10151,6 +10154,89 @@ export const GENERATED_PROVIDER_MODELS: {
 				releaseDate: "2023-03-01",
 			},
 		},
+		"kimi-for-coding": {
+			k2p7: {
+				id: "k2p7",
+				name: "Kimi K2.7 Code",
+				contextWindow: 262144,
+				maxInputTokens: 262144,
+				maxTokens: 32768,
+				capabilities: ["images", "tools", "reasoning", "structured_output"],
+				pricing: {
+					input: 0,
+					output: 0,
+					cacheRead: 0,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-06-12",
+				family: "kimi-k2",
+			},
+			k2p6: {
+				id: "k2p6",
+				name: "Kimi K2.6",
+				contextWindow: 262144,
+				maxInputTokens: 262144,
+				maxTokens: 32768,
+				capabilities: [
+					"images",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+				],
+				pricing: {
+					input: 0,
+					output: 0,
+					cacheRead: 0,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-04",
+				family: "kimi-thinking",
+			},
+			k2p5: {
+				id: "k2p5",
+				name: "Kimi K2.5",
+				contextWindow: 262144,
+				maxInputTokens: 262144,
+				maxTokens: 32768,
+				capabilities: [
+					"images",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+				],
+				pricing: {
+					input: 0,
+					output: 0,
+					cacheRead: 0,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-01",
+				family: "kimi-thinking",
+			},
+			"kimi-k2-thinking": {
+				id: "kimi-k2-thinking",
+				name: "Kimi K2 Thinking",
+				contextWindow: 262144,
+				maxInputTokens: 262144,
+				maxTokens: 32768,
+				capabilities: [
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+				],
+				pricing: {
+					input: 0,
+					output: 0,
+					cacheRead: 0,
+					cacheWrite: 0,
+				},
+				releaseDate: "2025-11",
+				family: "kimi-thinking",
+			},
+		},
 		lmstudio: {
 			"openai/gpt-oss-20b": {
 				id: "openai/gpt-oss-20b",
@@ -11386,6 +11472,98 @@ export const GENERATED_PROVIDER_MODELS: {
 			},
 		},
 		"openai-native": {
+			"gpt-5.6": {
+				id: "gpt-5.6",
+				name: "GPT-5.6",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 5,
+					output: 30,
+					cacheRead: 0.5,
+					cacheWrite: 6.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"gpt-5.6-luna": {
+				id: "gpt-5.6-luna",
+				name: "GPT-5.6 Luna",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1,
+					output: 6,
+					cacheRead: 0.1,
+					cacheWrite: 1.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-nano",
+			},
+			"gpt-5.6-sol": {
+				id: "gpt-5.6-sol",
+				name: "GPT-5.6 Sol",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 5,
+					output: 30,
+					cacheRead: 0.5,
+					cacheWrite: 6.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"gpt-5.6-terra": {
+				id: "gpt-5.6-terra",
+				name: "GPT-5.6 Terra",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 2.5,
+					output: 15,
+					cacheRead: 0.25,
+					cacheWrite: 3.125,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-mini",
+			},
 			"gpt-5.5": {
 				id: "gpt-5.5",
 				name: "GPT-5.5",
@@ -12240,6 +12418,144 @@ export const GENERATED_PROVIDER_MODELS: {
 			},
 		},
 		openrouter: {
+			"openai/gpt-5.6-luna": {
+				id: "openai/gpt-5.6-luna",
+				name: "GPT-5.6 Luna",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1,
+					output: 6,
+					cacheRead: 0.1,
+					cacheWrite: 1.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-nano",
+			},
+			"openai/gpt-5.6-luna-pro": {
+				id: "openai/gpt-5.6-luna-pro",
+				name: "GPT-5.6 Luna Pro",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1,
+					output: 6,
+					cacheRead: 0.1,
+					cacheWrite: 1.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-nano",
+			},
+			"openai/gpt-5.6-sol": {
+				id: "openai/gpt-5.6-sol",
+				name: "GPT-5.6 Sol",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 5,
+					output: 30,
+					cacheRead: 0.5,
+					cacheWrite: 6.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"openai/gpt-5.6-sol-pro": {
+				id: "openai/gpt-5.6-sol-pro",
+				name: "GPT-5.6 Sol Pro",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 5,
+					output: 30,
+					cacheRead: 0.5,
+					cacheWrite: 6.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"openai/gpt-5.6-terra": {
+				id: "openai/gpt-5.6-terra",
+				name: "GPT-5.6 Terra",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 2.5,
+					output: 15,
+					cacheRead: 0.25,
+					cacheWrite: 3.125,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-mini",
+			},
+			"openai/gpt-5.6-terra-pro": {
+				id: "openai/gpt-5.6-terra-pro",
+				name: "GPT-5.6 Terra Pro",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 2.5,
+					output: 15,
+					cacheRead: 0.25,
+					cacheWrite: 3.125,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt-mini",
+			},
 			"~x-ai/grok-latest": {
 				id: "~x-ai/grok-latest",
 				name: "Grok Latest",
@@ -12375,6 +12691,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-07-02",
+				family: "laguna",
 			},
 			"poolside/laguna-xs-2.1:free": {
 				id: "poolside/laguna-xs-2.1:free",
@@ -12390,6 +12707,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-07-02",
+				family: "laguna",
 			},
 			"anthropic/claude-sonnet-5": {
 				id: "anthropic/claude-sonnet-5",
@@ -12503,7 +12821,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				name: "GLM-5.2",
 				contextWindow: 1048576,
 				maxInputTokens: 1048576,
-				maxTokens: 1048576,
+				maxTokens: 131072,
 				capabilities: [
 					"tools",
 					"reasoning",
@@ -12512,9 +12830,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.9,
-					output: 3.08,
-					cacheRead: 0.18,
+					input: 0.42,
+					output: 1.32,
+					cacheRead: 0.078,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-06-13",
@@ -12525,7 +12843,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				name: "Kimi K2.7 Code",
 				contextWindow: 262144,
 				maxInputTokens: 262144,
-				maxTokens: 16384,
+				maxTokens: 262144,
 				capabilities: [
 					"images",
 					"tools",
@@ -12535,9 +12853,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.74,
-					output: 3.5,
-					cacheRead: 0.15,
+					input: 0.72,
+					output: 3.49,
+					cacheRead: 0.159,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-06-12",
@@ -12614,8 +12932,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"nvidia/nemotron-3-ultra-550b-a55b": {
 				id: "nvidia/nemotron-3-ultra-550b-a55b",
 				name: "Nemotron 3 Ultra 550B A55B",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
+				contextWindow: 1000000,
+				maxInputTokens: 1000000,
 				maxTokens: 16384,
 				capabilities: [
 					"tools",
@@ -12675,9 +12993,9 @@ export const GENERATED_PROVIDER_MODELS: {
 			"minimax/minimax-m3": {
 				id: "minimax/minimax-m3",
 				name: "MiniMax-M3",
-				contextWindow: 524288,
-				maxInputTokens: 524288,
-				maxTokens: 512000,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
+				maxTokens: 131072,
 				capabilities: [
 					"images",
 					"tools",
@@ -12969,6 +13287,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-28",
+				family: "laguna",
 			},
 			"poolside/laguna-m.1:free": {
 				id: "poolside/laguna-m.1:free",
@@ -12984,36 +13303,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-28",
-			},
-			"poolside/laguna-xs.2": {
-				id: "poolside/laguna-xs.2",
-				name: "Laguna XS.2",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
-				maxTokens: 32768,
-				capabilities: ["tools", "reasoning", "temperature", "prompt-cache"],
-				pricing: {
-					input: 0.1,
-					output: 0.2,
-					cacheRead: 0.05,
-					cacheWrite: 0,
-				},
-				releaseDate: "2026-04-28",
-			},
-			"poolside/laguna-xs.2:free": {
-				id: "poolside/laguna-xs.2:free",
-				name: "Laguna XS.2 (free)",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
-				maxTokens: 32768,
-				capabilities: ["tools", "reasoning", "temperature"],
-				pricing: {
-					input: 0,
-					output: 0,
-					cacheRead: 0,
-					cacheWrite: 0,
-				},
-				releaseDate: "2026-04-28",
+				family: "laguna",
 			},
 			"~anthropic/claude-haiku-latest": {
 				id: "~anthropic/claude-haiku-latest",
@@ -13125,9 +13415,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.65,
+					input: 0.66,
 					output: 3.41,
-					cacheRead: 0.14,
+					cacheRead: 0.15,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-27",
@@ -13151,7 +13441,7 @@ export const GENERATED_PROVIDER_MODELS: {
 					input: 5,
 					output: 30,
 					cacheRead: 0.5,
-					cacheWrite: 0,
+					cacheWrite: 6.25,
 				},
 				releaseDate: "2026-04-27",
 				family: "gpt",
@@ -13230,7 +13520,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				name: "DeepSeek V4 Flash",
 				contextWindow: 1048576,
 				maxInputTokens: 1048576,
-				maxTokens: 65536,
+				maxTokens: 384000,
 				capabilities: [
 					"tools",
 					"reasoning",
@@ -13239,9 +13529,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.09,
-					output: 0.18,
-					cacheRead: 0.018,
+					input: 0.084,
+					output: 0.168,
+					cacheRead: 0.0168,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-24",
@@ -13338,8 +13628,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3.6-27b": {
 				id: "qwen/qwen3.6-27b",
 				name: "Qwen3.6 27B",
-				contextWindow: 262140,
-				maxInputTokens: 262140,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 262140,
 				capabilities: [
 					"images",
@@ -13361,8 +13651,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"xiaomi/mimo-v2.5": {
 				id: "xiaomi/mimo-v2.5",
 				name: "MiMo-V2.5",
-				contextWindow: 32000,
-				maxInputTokens: 32000,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
 				maxTokens: 131072,
 				capabilities: [
 					"images",
@@ -13463,9 +13753,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.65,
+					input: 0.66,
 					output: 3.41,
-					cacheRead: 0.14,
+					cacheRead: 0.15,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-21",
@@ -13605,8 +13895,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"z-ai/glm-5.1": {
 				id: "z-ai/glm-5.1",
 				name: "GLM-5.1",
-				contextWindow: 200000,
-				maxInputTokens: 200000,
+				contextWindow: 202752,
+				maxInputTokens: 202752,
 				maxTokens: 128000,
 				capabilities: [
 					"tools",
@@ -13649,8 +13939,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"google/gemma-4-26b-a4b-it:free": {
 				id: "google/gemma-4-26b-a4b-it:free",
 				name: "Gemma 4 26B A4B  (free)",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 32768,
 				capabilities: [
 					"images",
@@ -13832,8 +14122,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"minimax/minimax-m2.7": {
 				id: "minimax/minimax-m2.7",
 				name: "MiniMax-M2.7",
-				contextWindow: 196608,
-				maxInputTokens: 196608,
+				contextWindow: 204800,
+				maxInputTokens: 204800,
 				maxTokens: 196608,
 				capabilities: [
 					"tools",
@@ -13842,8 +14132,8 @@ export const GENERATED_PROVIDER_MODELS: {
 					"temperature",
 				],
 				pricing: {
-					input: 0.18,
-					output: 0.72,
+					input: 0.24,
+					output: 0.96,
 					cacheRead: 0,
 					cacheWrite: 0,
 				},
@@ -13938,8 +14228,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"nvidia/nemotron-3-super-120b-a12b": {
 				id: "nvidia/nemotron-3-super-120b-a12b",
 				name: "Nemotron 3 Super 120B A12B",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
+				contextWindow: 1000000,
+				maxInputTokens: 1000000,
 				maxTokens: 16384,
 				capabilities: [
 					"tools",
@@ -13959,8 +14249,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"nvidia/nemotron-3-super-120b-a12b:free": {
 				id: "nvidia/nemotron-3-super-120b-a12b:free",
 				name: "Nemotron 3 Super (free)",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
+				contextWindow: 1000000,
+				maxInputTokens: 1000000,
 				maxTokens: 262144,
 				capabilities: [
 					"tools",
@@ -14287,8 +14577,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"google/gemini-3.1-pro-preview-customtools": {
 				id: "google/gemini-3.1-pro-preview-customtools",
 				name: "Gemini 3.1 Pro Preview Custom Tools",
-				contextWindow: 1048576,
-				maxInputTokens: 1048576,
+				contextWindow: 1048756,
+				maxInputTokens: 1048756,
 				maxTokens: 65536,
 				capabilities: [
 					"images",
@@ -14357,8 +14647,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3.5-397b-a17b": {
 				id: "qwen/qwen3.5-397b-a17b",
 				name: "Qwen3.5 397B-A17B",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 256000,
+				maxInputTokens: 256000,
 				maxTokens: 64000,
 				capabilities: [
 					"images",
@@ -14380,19 +14670,20 @@ export const GENERATED_PROVIDER_MODELS: {
 			"minimax/minimax-m2.5": {
 				id: "minimax/minimax-m2.5",
 				name: "MiniMax-M2.5",
-				contextWindow: 196608,
-				maxInputTokens: 196608,
+				contextWindow: 204800,
+				maxInputTokens: 204800,
 				maxTokens: 196608,
 				capabilities: [
 					"tools",
 					"reasoning",
 					"structured_output",
 					"temperature",
+					"prompt-cache",
 				],
 				pricing: {
-					input: 0.12,
-					output: 0.48,
-					cacheRead: 0,
+					input: 0.15,
+					output: 0.9,
+					cacheRead: 0.05,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-02-12",
@@ -14645,8 +14936,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"moonshotai/kimi-k2.5": {
 				id: "moonshotai/kimi-k2.5",
 				name: "Kimi K2.5",
-				contextWindow: 256000,
-				maxInputTokens: 256000,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 256000,
 				capabilities: [
 					"images",
@@ -15040,8 +15331,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"deepseek/deepseek-chat": {
 				id: "deepseek/deepseek-chat",
 				name: "DeepSeek Chat",
-				contextWindow: 128000,
-				maxInputTokens: 128000,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 16000,
 				capabilities: ["tools", "structured_output", "temperature"],
 				pricing: {
@@ -15056,8 +15347,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"deepseek/deepseek-v3.2": {
 				id: "deepseek/deepseek-v3.2",
 				name: "DeepSeek V3.2",
-				contextWindow: 128000,
-				maxInputTokens: 128000,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 64000,
 				capabilities: [
 					"tools",
@@ -15067,9 +15358,9 @@ export const GENERATED_PROVIDER_MODELS: {
 					"prompt-cache",
 				],
 				pricing: {
-					input: 0.2288,
-					output: 0.3432,
-					cacheRead: 0.02288,
+					input: 0.2145,
+					output: 0.32175,
+					cacheRead: 0.02145,
 					cacheWrite: 0,
 				},
 				releaseDate: "2025-12-01",
@@ -15332,8 +15623,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-vl-32b-instruct": {
 				id: "qwen/qwen3-vl-32b-instruct",
 				name: "Qwen3 VL 32B Instruct",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 32768,
 				capabilities: ["images", "tools", "structured_output", "temperature"],
 				pricing: {
@@ -15372,8 +15663,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-vl-8b-instruct": {
 				id: "qwen/qwen3-vl-8b-instruct",
 				name: "Qwen3 VL 8B Instruct",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 256000,
+				maxInputTokens: 256000,
 				maxTokens: 32768,
 				capabilities: ["images", "tools", "structured_output", "temperature"],
 				pricing: {
@@ -15388,8 +15679,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-vl-8b-thinking": {
 				id: "qwen/qwen3-vl-8b-thinking",
 				name: "Qwen3 VL 8B Thinking",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 256000,
+				maxInputTokens: 256000,
 				maxTokens: 32768,
 				capabilities: [
 					"images",
@@ -15432,8 +15723,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-vl-30b-a3b-instruct": {
 				id: "qwen/qwen3-vl-30b-a3b-instruct",
 				name: "Qwen3 VL 30B A3B Instruct",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 32768,
 				capabilities: ["images", "tools", "structured_output", "temperature"],
 				pricing: {
@@ -15533,30 +15824,6 @@ export const GENERATED_PROVIDER_MODELS: {
 				},
 				releaseDate: "2025-09-29",
 				family: "deepseek",
-			},
-			"google/gemini-2.5-flash-lite-preview-09-2025": {
-				id: "google/gemini-2.5-flash-lite-preview-09-2025",
-				name: "Gemini 2.5 Flash Lite Preview 09-2025",
-				contextWindow: 1048576,
-				maxInputTokens: 1048576,
-				maxTokens: 65535,
-				capabilities: [
-					"images",
-					"files",
-					"tools",
-					"reasoning",
-					"structured_output",
-					"temperature",
-					"prompt-cache",
-				],
-				pricing: {
-					input: 0.1,
-					output: 0.4,
-					cacheRead: 0.01,
-					cacheWrite: 0.083333,
-				},
-				releaseDate: "2025-09-25",
-				family: "gemini-flash-lite",
 			},
 			"qwen/qwen3-max": {
 				id: "qwen/qwen3-max",
@@ -15756,8 +16023,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-next-80b-a3b-thinking": {
 				id: "qwen/qwen3-next-80b-a3b-thinking",
 				name: "Qwen3-Next 80B-A3B (Thinking)",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 32768,
 				capabilities: [
 					"tools",
@@ -15777,8 +16044,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-30b-a3b-thinking-2507": {
 				id: "qwen/qwen3-30b-a3b-thinking-2507",
 				name: "Qwen3 30B A3B Thinking 2507",
-				contextWindow: 81920,
-				maxInputTokens: 81920,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 32768,
 				capabilities: ["tools", "reasoning", "temperature"],
 				pricing: {
@@ -16000,8 +16267,8 @@ export const GENERATED_PROVIDER_MODELS: {
 					"temperature",
 				],
 				pricing: {
-					input: 0.03,
-					output: 0.15,
+					input: 0.036,
+					output: 0.18,
 					cacheRead: 0,
 					cacheWrite: 0,
 				},
@@ -16091,8 +16358,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-30b-a3b-instruct-2507": {
 				id: "qwen/qwen3-30b-a3b-instruct-2507",
 				name: "Qwen3 30B A3B Instruct 2507",
-				contextWindow: 128000,
-				maxInputTokens: 128000,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 32000,
 				capabilities: ["tools", "structured_output", "temperature"],
 				pricing: {
@@ -16171,8 +16438,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-235b-a22b-thinking-2507": {
 				id: "qwen/qwen3-235b-a22b-thinking-2507",
 				name: "Qwen3 235B A22B Thinking 2507",
-				contextWindow: 131072,
-				maxInputTokens: 131072,
+				contextWindow: 262144,
+				maxInputTokens: 262144,
 				maxTokens: 262144,
 				capabilities: ["tools", "reasoning", "temperature"],
 				pricing: {
@@ -16187,8 +16454,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-coder": {
 				id: "qwen/qwen3-coder",
 				name: "Qwen3 Coder 480B A35B",
-				contextWindow: 262144,
-				maxInputTokens: 262144,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
 				maxTokens: 65536,
 				capabilities: ["tools", "structured_output", "temperature"],
 				pricing: {
@@ -16224,8 +16491,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-coder:free": {
 				id: "qwen/qwen3-coder:free",
 				name: "Qwen3 Coder 480B A35B (free)",
-				contextWindow: 262000,
-				maxInputTokens: 262000,
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
 				maxTokens: 262000,
 				capabilities: ["tools", "temperature"],
 				pricing: {
@@ -16552,8 +16819,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-14b": {
 				id: "qwen/qwen3-14b",
 				name: "Qwen3 14B",
-				contextWindow: 40960,
-				maxInputTokens: 40960,
+				contextWindow: 131702,
+				maxInputTokens: 131702,
 				maxTokens: 40960,
 				capabilities: [
 					"tools",
@@ -16573,8 +16840,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-30b-a3b": {
 				id: "qwen/qwen3-30b-a3b",
 				name: "Qwen3 30B A3B",
-				contextWindow: 40960,
-				maxInputTokens: 40960,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 16384,
 				capabilities: [
 					"tools",
@@ -16764,8 +17031,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"meta-llama/llama-4-scout": {
 				id: "meta-llama/llama-4-scout",
 				name: "Llama 4 Scout",
-				contextWindow: 327680,
-				maxInputTokens: 327680,
+				contextWindow: 10000000,
+				maxInputTokens: 10000000,
 				maxTokens: 16384,
 				capabilities: ["images", "tools", "structured_output", "temperature"],
 				pricing: {
@@ -16796,8 +17063,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen3-32b": {
 				id: "qwen/qwen3-32b",
 				name: "Qwen3 32B",
-				contextWindow: 40960,
-				maxInputTokens: 40960,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 16384,
 				capabilities: [
 					"tools",
@@ -16930,8 +17197,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"deepseek/deepseek-r1": {
 				id: "deepseek/deepseek-r1",
 				name: "DeepSeek-R1",
-				contextWindow: 64000,
-				maxInputTokens: 64000,
+				contextWindow: 163840,
+				maxInputTokens: 163840,
 				maxTokens: 16000,
 				capabilities: [
 					"tools",
@@ -16989,8 +17256,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"meta-llama/llama-3.3-70b-instruct:free": {
 				id: "meta-llama/llama-3.3-70b-instruct:free",
 				name: "Llama 3.3 70B Instruct (free)",
-				contextWindow: 65536,
-				maxInputTokens: 65536,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 131072,
 				capabilities: ["tools", "temperature"],
 				pricing: {
@@ -17159,8 +17426,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen-2.5-7b-instruct": {
 				id: "qwen/qwen-2.5-7b-instruct",
 				name: "Qwen2.5 7B Instruct",
-				contextWindow: 32768,
-				maxInputTokens: 32768,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 32768,
 				capabilities: ["tools", "structured_output", "temperature"],
 				pricing: {
@@ -17175,8 +17442,8 @@ export const GENERATED_PROVIDER_MODELS: {
 			"qwen/qwen-2.5-72b-instruct": {
 				id: "qwen/qwen-2.5-72b-instruct",
 				name: "Qwen2.5 72B Instruct",
-				contextWindow: 32768,
-				maxInputTokens: 32768,
+				contextWindow: 131072,
+				maxInputTokens: 131072,
 				maxTokens: 16384,
 				capabilities: ["tools", "structured_output", "temperature"],
 				pricing: {
@@ -18450,6 +18717,54 @@ export const GENERATED_PROVIDER_MODELS: {
 				releaseDate: "2026-05-28",
 				family: "claude-opus",
 			},
+			"gemini-3.5-flash": {
+				id: "gemini-3.5-flash",
+				name: "gemini-3.5-flash",
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
+				maxTokens: 65536,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1.5,
+					output: 9,
+					cacheRead: 0.15,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-05-19",
+				family: "gemini-flash",
+			},
+			"gemini-3.1-flash-lite": {
+				id: "gemini-3.1-flash-lite",
+				name: "gemini-3.1-flash-lite",
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
+				maxTokens: 65536,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 0.25,
+					output: 1.5,
+					cacheRead: 0.025,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-05-07",
+				family: "gemini-flash-lite",
+			},
 			"gpt-5.5": {
 				id: "gpt-5.5",
 				name: "gpt-5.5",
@@ -19447,6 +19762,102 @@ export const GENERATED_PROVIDER_MODELS: {
 			},
 		},
 		"vercel-ai-gateway": {
+			"meta/muse-spark-1.1": {
+				id: "meta/muse-spark-1.1",
+				name: "Muse Spark 1.1",
+				contextWindow: 1048576,
+				maxInputTokens: 1048576,
+				maxTokens: 1048576,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1.25,
+					output: 4.25,
+					cacheRead: 0.15,
+					cacheWrite: 0,
+				},
+				releaseDate: "2026-07-09",
+				family: "muse",
+			},
+			"openai/gpt-5.6-luna": {
+				id: "openai/gpt-5.6-luna",
+				name: "GPT 5.6 Luna",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 1,
+					output: 6,
+					cacheRead: 0.1,
+					cacheWrite: 1.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"openai/gpt-5.6-sol": {
+				id: "openai/gpt-5.6-sol",
+				name: "GPT 5.6 Sol",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 5,
+					output: 30,
+					cacheRead: 0.5,
+					cacheWrite: 6.25,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
+			"openai/gpt-5.6-terra": {
+				id: "openai/gpt-5.6-terra",
+				name: "GPT 5.6 Terra",
+				contextWindow: 1050000,
+				maxInputTokens: 922000,
+				maxTokens: 128000,
+				capabilities: [
+					"images",
+					"files",
+					"tools",
+					"reasoning",
+					"structured_output",
+					"temperature",
+					"prompt-cache",
+				],
+				pricing: {
+					input: 2.5,
+					output: 15,
+					cacheRead: 0.25,
+					cacheWrite: 3.125,
+				},
+				releaseDate: "2026-07-09",
+				family: "gpt",
+			},
 			"xai/grok-4.5": {
 				id: "xai/grok-4.5",
 				name: "Grok 4.5",
@@ -19922,7 +20333,7 @@ export const GENERATED_PROVIDER_MODELS: {
 				pricing: {
 					input: 0.14,
 					output: 0.28,
-					cacheRead: 0.0028,
+					cacheRead: 0.028,
 					cacheWrite: 0,
 				},
 				releaseDate: "2026-04-23",

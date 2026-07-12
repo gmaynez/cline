@@ -148,6 +148,28 @@ describe("built-in provider metadata", () => {
 		);
 	});
 
+	it("uses Kimi's documented K2.7 model IDs and enables thinking by default", async () => {
+		const models = await getModelsForProvider("kimi-for-coding");
+		const provider = await getProvider("kimi-for-coding");
+
+		expect(provider?.defaultModelId).toBe("kimi-for-coding");
+		expect(Object.keys(models)).toEqual([
+			"kimi-for-coding",
+			"kimi-for-coding-highspeed",
+		]);
+		expect(models["kimi-for-coding"]).toMatchObject({
+			id: "kimi-for-coding",
+			name: "Kimi K2.7 Code",
+			metadata: { reasoningDefaultOn: true },
+		});
+		expect(models["kimi-for-coding-highspeed"]).toMatchObject({
+			id: "kimi-for-coding-highspeed",
+			name: "Kimi K2.7 Code HighSpeed",
+			family: "kimi-k2",
+			metadata: { reasoningDefaultOn: true },
+		});
+	});
+
 	it("routes native Z.AI providers through GLM thinking metadata", async () => {
 		for (const providerId of ["zai", "zai-coding-plan"] as const) {
 			await expect(getProvider(providerId)).resolves.toMatchObject({
